@@ -163,10 +163,10 @@ public class ClerkService {
         try {
             User user = new User();
             user.setClerkUserId(clerkUserId);
-            user.setFirstName(claims.get("name", String.class));
-            user.setLastName(claims.get("name", String.class));
+            user.setFirstName(claims.get("firstName", String.class));
+            user.setLastName(claims.get("lastName", String.class));
             user.setEmail(claims.get("email", String.class));
-            user.setPhoneNumber(claims.get("phone", String.class));
+            user.setPhoneNumber(claims.get("phoneNumber", String.class));
             user.setRole(User.Role.RIDER); // Default role
             user.setCreatedAt(Instant.now());
             user.setUpdatedAt(Instant.now());
